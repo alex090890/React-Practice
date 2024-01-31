@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 
-export default function Counter() {
+export default function Counter(props) {
 
+
+  
     const [count, setCount] = useState(0);
 
   function decrement() {
-    setCount(prevCount => prevCount - 1);
+    setCount(count - 1);
   }
 
   function increment() {
@@ -15,8 +17,9 @@ export default function Counter() {
     return (
         <div>
             <button onClick={decrement}>-</button>
-            <p>{count}</p>
+            <p counter={props.Counter} >{count}</p>
             <button onClick={increment}>+</button>
         </div>
     )
 }
+
