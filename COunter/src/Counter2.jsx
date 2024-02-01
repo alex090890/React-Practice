@@ -1,22 +1,12 @@
 import React, { useState } from 'react';
 
-export default function Counter2() {
-
-    const [count, setCount] = useState(0);
-
-  function decrement() {
-    setCount(prevCount => prevCount - 1);
-  }
-
-  function increment() {
-    setCount(prevCount => prevCount + 1);
-  }
+export default function Counter2({ onDecrement, onIncrement, count }) {
 
     return (
         <div>
-            <button onClick={decrement}>-</button>
-            <p>{count}</p>
-            <button onClick={increment}>+</button>
+          <button onClick={onDecrement}>-</button>
+          <p>{count}</p>
+          <button onClick={onIncrement}>+</button>
         </div>
     )
 }
