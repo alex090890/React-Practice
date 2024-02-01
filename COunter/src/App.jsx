@@ -36,9 +36,12 @@ export default function App() {
   return (
     <div>
       <Counter onDecrement={decrement1} onIncrement={increment1} count={count1} />
+      <h1>+</h1>
       <Counter2 onDecrement={decrement2} onIncrement={increment2} count={count2} />
+      <h1>+</h1>
       <Counter3 onDecrement={decrement3} onIncrement={increment3} count={count3} />
-      <CounterSum counter1={count1} counter2={count2} counter3={count3} />
+      <h1>=</h1>
+      <CounterSum counter1={count1} counter2={count2} counter3={count3} onDecrement={decrement3} onIncrement={increment3} />
     </div>
   );
 }
